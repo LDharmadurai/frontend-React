@@ -57,7 +57,7 @@ const NewItem: React.FC = () => {
             <form action="" onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor="">First Name</label>
-                        <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} required maxLength={20} />
+                        <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} maxLength={20} />
                     </div>
                     <div>
                         <label htmlFor="">Last Name</label>
