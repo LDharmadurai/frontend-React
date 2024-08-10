@@ -41,7 +41,7 @@ const Home: React.FC = () => {
     // setOrders(Sampleorders);
     const getOrders = async () =>{
         try{
-            const response = await axios.get('http://localhost:5182/api/GetOrders');
+            const response = await axios.get('http://localhost:5182/api/Orders/GetOrders');
             setOrders(response.data);
         }
         catch(error){
@@ -55,7 +55,7 @@ const Home: React.FC = () => {
 const handleDelete = (orderid: number) => {
 
     try {
-        axios.delete(`http://localhost:5182/api/PutOrder/${orderid}`);
+        axios.delete(`http://localhost:5182/api/Orders/DeleteOrder/${orderid}`);
         setOrders(orders.filter((order) => order.id != orderid));
     }
     catch (error) {
