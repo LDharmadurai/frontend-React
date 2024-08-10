@@ -30,7 +30,7 @@ const NewItem: React.FC = () => {
         }
 
         try {
-            axios.post('http://localhost:5182/api/PostOrder', {
+            axios.post('http://localhost:5182/api/Orders/CreateOrder', {
                 firstName,
                 lastName,
                 description,
